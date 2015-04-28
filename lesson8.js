@@ -6,8 +6,6 @@ var data = http.get(url, function (response) {
 
     var stream = ''
 
-    // response.setEncoding('utf8')
-
     response.on("error", function (error) {
         console.error('There was an error:', err)
     })
@@ -19,5 +17,6 @@ var data = http.get(url, function (response) {
     response.on("end", function () {
         console.log(stream.length);
         console.log(stream);
+
     })
 })
