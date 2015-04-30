@@ -10,7 +10,7 @@ urls.forEach( function(url, index, array) {
 
     http.get(url, function (response) {
 
-        stream = ''
+        var stream = ''
 
         response.on("error", function (error) {
             console.error('There was an error:', err)
