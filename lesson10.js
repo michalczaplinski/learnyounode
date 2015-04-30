@@ -1,8 +1,12 @@
-net = require('net')
-port = process.argv[2]
+var net = require('net')
+var port = process.argv[2]
+var moment = require('moment')
 
-sever = net.createServer( function (socket) {
-    socket.write()
+server = net.createServer( function (socket) {
+
+    var now = moment().format('YYYY-MM-DD HH:mm');
+
+    socket.write(now)
 
     socket.end()
 });
